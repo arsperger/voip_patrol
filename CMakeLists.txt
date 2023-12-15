@@ -47,7 +47,7 @@ set(CMAKE_LIBRARY_PATH
 	"${ROOT_DIR}/pjproject/pjlib-util/lib"
 )
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11 -g -DPJ_AUTOCONF=1 ")
 
 execute_process(COMMAND "./pjproject/config.guess" OUTPUT_VARIABLE AC_SYSTEM)
 string(STRIP ${AC_SYSTEM} AC_SYSTEM)
